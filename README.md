@@ -7,6 +7,7 @@ A Haircut Game!
 
 ![image](https://github.com/marktrak98/HairSalonSim/assets/59167428/db15a468-079c-4590-9b08-54fca1761876)
 
+Note: If run on windows, the man and woman icons are replaced by X and Y respectively. windows-curses seems unable to handle UNICODE icons ¯\\_(ツ)_/¯.
 
 # How to run
 
