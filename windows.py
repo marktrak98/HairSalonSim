@@ -2,6 +2,7 @@ from __future__ import annotations
 import curses
 from math import floor, ceil
 import textwrap
+from sys import platform
 
 from utils import log, only_alnum
 from vector import Vector2
@@ -17,6 +18,15 @@ MAIN_WINDOW_HEIGHT = 0.8
 MAIN_WINDOW_WIDTH = 0.6
 CONTROLS_WINDOW_HEIGHT = 1 - MAIN_WINDOW_HEIGHT
 CHAT_WINDOW_WIDTH = 1 - MAIN_WINDOW_WIDTH
+
+
+if platform == 'win32':
+    MAN = 'X'
+    WOMAN = 'Y'
+
+else:
+    MAN = '👨'
+    WOMAN = '👩'
 
 
 class WorldWindow:
@@ -60,9 +70,9 @@ class WorldWindow:
             for i, line in enumerate(self.SALON):
                 self.window.addstr(1+i, 1, line)
 
-            self.window.addch(self.game.player.position.y, self.game.player.position.x, '👨')
+            self.window.addch(self.game.player.position.y, self.game.player.position.x, MAN)
             for character in self.game.characters:
-                self.window.addch(character.position.y, character.position.x, '👩')
+                self.window.addch(character.position.y, character.position.x, WOMAN)
 
             self.window.refresh()
             self.needs_refresh = False
