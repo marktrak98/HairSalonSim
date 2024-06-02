@@ -11,8 +11,16 @@ A Haircut Game!
 # How to run
 
 1) Install Python3.x (I used Python3.8)
-2) Clone the repository/download and unzip it
-3) run main.py in the terminal
+2) Install curses (comes preinstalled for macos and linux, for windows use the following code)
+
+`python -m pip install windows-curses`
+
+OR 
+
+`python3 -m pip install windows-curses`
+
+3) Clone the repository/download and unzip it
+4) run main.py in the terminal
    
 `python main.py`
 
